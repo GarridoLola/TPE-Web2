@@ -17,8 +17,8 @@ class usuarioControlador {
     }
 
     public function login($request){
-        if (empty($_POST['nombre_usuario']) || empty($_POST['contraseña'])){
-            return $this->vista->mostrarLogin('Faltan completar datos.', $request->usuario);
+        if (empty($_POST['nombre_usuario']) || empty($_POST['contraseña'])) { 
+            return $this->vista->mostrarLogin("Faltan completar datos.", $request->usuario);
         }
 
         $nombre_usuario = $_POST['nombre_usuario'];
@@ -39,7 +39,7 @@ class usuarioControlador {
     }    
     public function logOut($request){
         session_destroy();
-        header("Location: " . BASE_URL . "login");
+        header("Location: " . BASE_URL . "mostrarLogin"); //muestra el formulario, no lo procesa.
         return;
     }
 }

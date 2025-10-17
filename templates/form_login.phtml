@@ -4,16 +4,15 @@
     </div>
 <?php endif ?>
 
-<form method="POST" action="login">
-    <div class="alert alert-info" role="alert">
-        <p> Es necesario iniciar sesión para realizar cambios. Complete los campos a continuación.</p>
-    </div>
-
+<div>
+    <h2> Iniciar Sesión: </h2>
+</div>
+<form method="POST" action="login" class="fs-5 p-3">
     <div class="form-group">
         <label for="nombre_usuario"> Usuario </label>
         <input type="text" class="form-control" id="nombre_usuario" name="nombre_usuario" required>
     </div>
-
+    <br>
     <div class="form-group">
         <label for="contraseña"> Contraseña </label>
         <input type="password" class="form-control" id="contraseña" name="contraseña" required>

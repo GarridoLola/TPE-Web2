@@ -26,8 +26,6 @@ switch ($params[0]){
 
     //home
     case 'home':
-        $request = (new GuardMiddleware())->run($request);
-        //  var_dump($request);
         $controlador = new homeControlador();
         $controlador->mostrarHome($request);
     break;
@@ -67,11 +65,11 @@ switch ($params[0]){
 
     //autenticación
     
-    case 'mostrarLogin':
+    case 'mostrarLogin': //muestra el login
         $controlador = new usuarioControlador();
         $controlador->mostrarLogin($request);
     break;
-    case 'login':
+    case 'login': //procesa el login
         $controlador = new usuarioControlador();
         $controlador->login($request);
     break;
